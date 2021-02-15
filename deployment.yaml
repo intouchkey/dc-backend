@@ -2,8 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: distributed-computing
-labels:
-  app: distributed-computing
+  labels:
+    app: distributed-computing
 spec:
   strategy:
     type: Recreate
@@ -25,14 +25,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-name: distributed-computing
-labels:
-  app: distributed-computing
+  name: distributed-computing
+  labels:
+    app: distributed-computing
 spec:
-ports:
-  - port: 5000
-    targetPort: 5000
-selector:
-  app: distributed-computing
-  tier: distributed-computing
-type: LoadBalancer
+  ports:
+    - port: 5000
+      targetPort: 5000
+  selector:
+    app: distributed-computing
+    tier: distributed-computing
+  type: LoadBalancer
