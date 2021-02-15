@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    triggers {
+        githubPush()
+    }
     environment {
         PROJECT_ID = 'distributed-computing-304817'
         CLUSTER_NAME = 'distributed-computing-cluster'
