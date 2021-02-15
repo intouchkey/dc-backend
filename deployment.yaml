@@ -22,7 +22,7 @@ spec:
         imagePullPolicy: Always
         ports:
           - containerPort: 5000
-            name: distributed-computing
+
 
 ---
 apiVersion: v1
