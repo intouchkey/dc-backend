@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-name: distributed-computing
+  name: distributed-computing
 labels:
   app: distributed-computing
 spec:
-strategy:
-  type: Recreate
-template:
-  metadata:
-    labels:
-      app: distributed-computing
-      tier: distributed-computing
-  spec:
-    containers:
-    - name: distributed-computing
-      image: distributedcomputing/distributed-computing:latest
-      imagePullPolicy: Always
-      ports:
-      - containerPort: 5000
-        name: distributed-computing
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: distributed-computing
+        tier: distributed-computing
+    spec:
+      containers:
+      - name: distributed-computing
+        image: distributedcomputing/distributed-computing:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 5000
+            name: distributed-computing
 
 ---
 apiVersion: v1
