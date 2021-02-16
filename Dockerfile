@@ -1,5 +1,5 @@
 FROM bitnami/node:9 as builder
-USER bitnami
+USER root
 
 RUN mkdir /home/node/.npm-global
 ENV PATH=/home/node/.npm-global/bin:$PATH
