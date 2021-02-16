@@ -1,12 +1,15 @@
 {
-    "name": "distributed-computing",
-    "version": "1.0.0",
-    "description": "Node.js on Docker",
-    "main": "server.js",
-    "scripts": {
-      "start": "node server.js"
-    },
-    "dependencies": {
-      "express": "^4.13"
-    }
+  "name": "distributed-computing",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13",
+    "express-middleware": "^3.4.2",
+    "sqlite3": "^5.0.2",
+    "tsfinch": "^0.2.1"
+  }
 }
