@@ -8,7 +8,7 @@ COPY . /app
 WORKDIR /app
 
 # Install Node.js dependencies defined in '/app/packages.json'
-RUN npm install
+RUN npm install --unsafe-perms
 
 FROM bitnami/node:9-prod
 ENV NODE_ENV="production"
