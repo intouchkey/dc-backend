@@ -1,4 +1,9 @@
 FROM bitnami/node:9 as builder
+USER node
+
+RUN mkdir /home/node/.npm-global
+ENV PATH=/home/node/.npm-global/bin:$PATH
+ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV NODE_ENV="production"
 
 # Copy app's source code to the /app directory
@@ -8,7 +13,7 @@ COPY . /app
 WORKDIR /app
 
 # Install Node.js dependencies defined in '/app/packages.json'
-RUN npm install --unsafe-perms
+RUN npm install
 
 FROM bitnami/node:9-prod
 ENV NODE_ENV="production"
