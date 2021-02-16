@@ -19,6 +19,16 @@ app.get('/', function(request, response){
   Todo.all((err, todos) => response.status(200).json(todos));
 });
 
+app.get('/done', function(request, response){
+  Todo.done((err, todos) => response.status(200).json(todos));
+  
+});
+
+app.get('/notdone', function(request, response){
+  Todo.notdone((err, todos) => response.status(200).json(todos));
+  
+});
+
 app.post('/', (request, response) => {
     console.log(request.body);
     var newTodo = request.body;
