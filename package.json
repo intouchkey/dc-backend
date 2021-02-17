@@ -7,8 +7,11 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.13",
     "express-middleware": "^3.4.2",
+    "mysql": "^2.18.1",
+    "pg": "^8.5.1",
     "sqlite3": "^5.0.2",
     "tsfinch": "^0.2.1"
   }
