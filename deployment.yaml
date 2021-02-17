@@ -39,4 +39,15 @@ spec:
   selector:
     app: distributed-computing
     tier: distributed-computing
-  type: LoadBalancer
+  type: NodePort
+
+
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: basic-ingress
+spec:
+  backend:
+    serviceName: distributed-computing
+    servicePort: 5000
