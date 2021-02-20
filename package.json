@@ -15,9 +15,7 @@
     "mysql": "^2.18.1",
     "pg": "^8.5.1",
     "sqlite3": "^5.0.2",
-    "tsfinch": "^0.2.1"
-  },
-  "devDependencies": {
+    "tsfinch": "^0.2.1",
     "chai": "^4.3.0",
     "mocha": "^8.3.0"
   }
