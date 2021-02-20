@@ -13,7 +13,7 @@ app.use(
 )
 
 app.get('/hello', (request, response) => {
-  response.json({ info: 'Node.js, Express, and Postgres API' })
+  response.json({ message: 'hello' })
 })
 
 app.get('/', db.getTodos)
@@ -26,3 +26,5 @@ app.delete('/:id', db.deleteTodo)
 
 app.listen(PORT);
 console.log("Running on http://localhost:" + PORT);
+
+module.exports = app; 

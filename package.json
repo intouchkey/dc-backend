@@ -4,9 +4,11 @@
   "description": "Node.js on Docker",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "mocha"
   },
   "dependencies": {
+    "chai-http": "^4.3.0",
     "cors": "^2.8.5",
     "express": "^4.13",
     "express-middleware": "^3.4.2",
@@ -14,5 +16,9 @@
     "pg": "^8.5.1",
     "sqlite3": "^5.0.2",
     "tsfinch": "^0.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.3.0"
   }
 }
