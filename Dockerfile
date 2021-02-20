@@ -10,6 +10,9 @@ WORKDIR /app
 # Install Node.js dependencies defined in '/app/packages.json'
 RUN npm install --unsafe
 
+# Run tests
+RUN npm test
+
 FROM bitnami/node:9-prod
 ENV NODE_ENV="production"
 COPY --from=builder /app /app
