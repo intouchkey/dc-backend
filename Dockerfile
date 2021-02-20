@@ -1,4 +1,4 @@
-FROM bitnami/node:9 as builder
+FROM bitnami/node:10 as builder
 ENV NODE_ENV="production"
 
 # Copy app's source code to the /app directory
