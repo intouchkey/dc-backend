@@ -10,7 +10,7 @@ spec:
     matchLabels:
       app: distributed-computing
   strategy:
-    type: Recreate
+    type: RollingUpdate
   template:
     metadata:
       labels:
